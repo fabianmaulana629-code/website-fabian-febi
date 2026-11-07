@@ -1,0 +1,365 @@
+/* --- Reset & Font Dasar --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe3ec 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Navigasi / Navbar --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(255, 117, 140, 0.15);
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff477e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo i {
+    color: #ff477e;
+    font-size: 1.4rem;
+    animation: pulse 1.2s infinite;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: #ff477e;
+    color: white;
+}
+
+/* --- Container Utama --- */
+.main-container {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* --- Seksi Halaman & Transisi --- */
+.page-section {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Halaman 1: Hero Card --- */
+.hero-card {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.heart-pulse {
+    font-size: 4rem;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.hero-card h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #d6336c;
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.quote-box {
+    background: #fff0f4;
+    padding: 15px 20px;
+    border-left: 4px solid #ff477e;
+    border-radius: 10px;
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+/* --- Tombol Utama & Sekunder --- */
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #ff477e;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 71, 126, 0.3);
+}
+
+.btn-primary:hover {
+    background: #d6336c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.nav-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+/* --- Judul Seksi --- */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #d6336c;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- Halaman 2: Timeline --- */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-icon {
+    font-size: 2.2rem;
+    background: #fff0f4;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    color: #ff477e;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* --- Halaman 3: Galeri Foto --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.photo-card .caption {
+    padding: 15px;
+}
+
+.photo-card h3 {
+    color: #d6336c;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.photo-card p {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* --- Halaman 4: Surat Cinta Interaktif --- */
+.letter-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.emoji-header {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.letter-card h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d6336c;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.letter-body {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.letter-body .question {
+    font-weight: 600;
+    color: #ff477e;
+    margin-top: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    min-height: 50px;
+}
+
+#btn-yes {
+    background: #ff477e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btn-no {
+    background: #cbd5e0;
+    color: #2d3748;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#success-msg {
+    margin-top: 20px;
+    background: #fff0f4;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#success-msg h3 {
+    color: #ff477e;
+    margin-bottom: 8px;
+}
+
+.celebrate-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a202c;
+    color: #a0aec0;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* --- Responsif Seluler --- */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-card h1 {
+        font-size: 2.8rem;
+    }
+}

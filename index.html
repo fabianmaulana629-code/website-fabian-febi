@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisah Cinta Fabian & Febi ❤️</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Atas -->
+    <nav class="navbar">
+        <div class="logo">Fabian <i class="fa-solid fa-heart"></i> Febi</div>
+        <div class="nav-links">
+            <button onclick="showPage(1)" class="nav-btn active" id="nav1">Beranda</button>
+            <button onclick="showPage(2)" class="nav-btn" id="nav2">Perjalanan Kita</button>
+            <button onclick="showPage(3)" class="nav-btn" id="nav3">Galeri Foto</button>
+            <button onclick="showPage(4)" class="nav-btn" id="nav4">Surat Cinta</button>
+        </div>
+    </nav>
+
+    <!-- Kontainer Utama -->
+    <main class="main-container">
+        
+        <!-- ===== HALAMAN 1: Beranda ===== -->
+        <section id="page1" class="page-section">
+            <div class="hero-card">
+                <div class="heart-pulse">💖</div>
+                <h1>Fabian & Febi</h1>
+                <p class="subtitle">Ruang Spesial Kumpulan Kenangan, Tawa, dan Cinta Kita Berdua</p>
+                <div class="quote-box">
+                    <p>"Di antara jutaan orang di dunia, aku bersyukur menemukan kamu, Febi Fatimatun."</p>
+                </div>
+                <button class="btn-primary" onclick="showPage(2)">Jelajahi Kisah Kita ➡️</button>
+            </div>
+        </section>
+
+        <!-- ===== HALAMAN 2: Perjalanan Kita (Timeline) ===== -->
+        <section id="page2" class="page-section hidden">
+            <h2 class="section-title">Perjalanan Cinta Kita ✨</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">🌹</div>
+                    <div class="timeline-content">
+                        <h3>Pertama Kali Bertemu</h3>
+                        <p>Momen awal di mana cerita manis Fabian & Febi dimulai di sekolah.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">📸</div>
+                    <div class="timeline-content">
+                        <h3>Foto Berdua Pertama</h3>
+                        <p>Senyuman manis dan pose kompak nan ceria yang tak pernah terlupakan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">👩‍❤️‍👨</div>
+                    <div class="timeline-content">
+                        <h3>Menjalani Hari Bersama</h3>
+                        <p>Saling melengkapi, melewati suka dan duka bersama-sama.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="showPage(1)">⬅️ Kembali</button>
+                <button class="btn-primary" onclick="showPage(3)">Lihat Galeri ➡️</button>
+            </div>
+        </section>
+
+        <!-- ===== HALAMAN 3: Galeri Kenangan ===== -->
+        <section id="page3" class="page-section hidden">
+            <h2 class="section-title">Galeri Foto Kenangan 🖼️</h2>
+            <p class="section-desc">Momen-momen manis dan menggemaskan Febi & Fabian</p>
+            
+            <div class="photo-grid">
+                <!-- Foto 1: Berdua -->
+                <div class="photo-card">
+                    <img src="WhatsApp Image 2026-11-06 at 17.31.26.jpeg" alt="Fabian dan Febi Berdua">
+                    <div class="caption">
+                        <h3>Momen Berdua di Sekolah</h3>
+                        <p>Momen manis dan hangat kita berdua di koridor sekolah.</p>
+                    </div>
+                </div>
+                <!-- Foto 2: Febi -->
+                <div class="photo-card">
+                    <img src="WhatsApp Image 2026-11-06 at 17.31.25.jpeg" alt="Febi Fatimatun">
+                    <div class="caption">
+                        <h3>Febi yang Cantik & Anggun</h3>
+                        <p>Senyum manis dengan kacamata yang selalu bikin kangen.</p>
+                    </div>
+                </div>
+                <!-- Foto 3: Fabian -->
+                <div class="photo-card">
+                    <img src="WhatsApp Image 2026-11-06 at 17.31.25 (1).jpeg" alt="Fabian Filter Konyol">
+                    <div class="caption">
+                        <h3>Fabian Pose Konyol</h3>
+                        <p>Gaya topi dan kumis kocak khusus buat bikin Febi ketawa!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="showPage(2)">⬅️ Kembali</button>
+                <button class="btn-primary" onclick="showPage(4)">Surat Khusus ➡️</button>
+            </div>
+        </section>
+
+        <!-- ===== HALAMAN 4: Surat Spesial & Pesan Interaktif ===== -->
+        <section id="page4" class="page-section hidden">
+            <div class="letter-card">
+                <div class="emoji-header">💌</div>
+                <h2>Pesan Dari Fabian Untuk Febi</h2>
+                <div class="letter-body">
+                    <p>Hai Febi sayang tercinta... 🌸</p>
+                    <p>
+                        Terima kasih ya sudah hadir dan jadi warna paling indah di hidup Fabian. 
+                        Maafin Fabian kalau pernah bikin Febi sebal, ngambek, atau kecewa. 
+                        Fabian janji bakal terus berusaha bikin Febi bahagia setiap hari!
+                    </p>
+                    <p class="question">Sekarang, Febi masih ngambek gak sama Fabian? 🥺</p>
+                </div>
+
+                <div class="button-group" id="interactive-buttons">
+                    <button id="btn-yes" onclick="acceptLetter()">Udah dimaafin kok! 🥰</button>
+                    <button id="btn-no" onmouseover="moveButton()" onclick="moveButton()">Masih ngambek! 😤</button>
+                </div>
+
+                <!-- Pesan Sukses -->
+                <div id="success-msg" class="hidden">
+                    <div class="celebrate-icon">🎉❤️</div>
+                    <h3>Yey! Makasih Banyak Febi Sayang!</h3>
+                    <p>Fabian sayang banget sama Febi Fatimatun. Janji deh gak bikin ngambek lagi! ✨</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Dibuat dengan ❤️ oleh Fabian khusus untuk Febi Fatimatun | Selamanya Bersama</p>
+    </footer>
+
+    <!-- Script Logika Multi-Halaman -->
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.add('hidden'));
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(`page${pageId}`).classList.remove('hidden');
+            
+            const activeNav = document.getElementById(`nav${pageId}`);
+            if (activeNav) activeNav.classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function acceptLetter() {
+            document.getElementById('interactive-buttons').classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        }
+
+        function moveButton() {
+            const btnNo = document.getElementById('btn-no');
+            const x = Math.random() * (window.innerWidth - btnNo.offsetWidth - 60);
+            const y = Math.random() * (window.innerHeight - btnNo.offsetHeight - 60);
+            
+            btnNo.style.position = 'fixed';
+            btnNo.style.left = `${Math.max(20, x)}px`;
+            btnNo.style.top = `${Math.max(20, y)}px`;
+        }
+    </script>
+</body>
+</html>
